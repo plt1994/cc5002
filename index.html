@@ -1,11 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <div class="titulo">Hackbox</div>
+
+    <div id="main" class="formulario">
+
+        <form action="vacio" method="post">
+            <!-- Entrada de texto para nombre -->
+            <div class="entrada">
+                <div class="leyenda"> Nombre </div>
+                <input required class="bordes" type="text" id="nombre" name="nombre" size=10 placeholder="Escriba su nombre aqui"
+                    maxlength="100">
+            </div>
+            <!-- Boton para agregar archivo -->
+            <div class="entrada">
+                <div class="leyenda"> Archivo </div>
+                <input required class="bordes" type="file" name="archivo" id="file" accept="application/pdf">
+            </div>
+            <!-- Select múltiple para privacidad -->
+            <div class="entrada">
+                <div class="leyenda"> Privacidad </div>
+                <select class="bordes" name="privacidad" id="epic">
+                    <option value="1">Público</option>
+                    <option value="2">Privado</option>
+                </select>
+            </div>
+
+            <!-- Entrada de contraseña -->
+            <div class="entrada">
+                <div class="leyenda"> Contraseña </div>
+                <input class="bordes" type="password" id="password" name="password" size=10
+                    maxlength="10">
+            </div>
+
+            <!-- Entrada de numero para autodestruir -->
+            <div class="entrada">
+                <div class="leyenda"> Autodestruir </div>
+                <input class="bordes derecha" type="number" id="autodestruir" name="autodestruir" min="1" max=31536000>
+            </div>
+
+            <!-- Entrada de comentario con texto libre -->
+            <div class="entrada">
+                <div class="leyenda"> Comentario </div>
+                <textarea class="bordes" name="comentario" id="comentario" cols="40" rows="10" placeholder="ingrese sus comentarios acá"></textarea>
+            </div>
+
+            <div class="boton">
+                <button type="submit">Upload</button>
+            </div>
+
+        </form>
+
+    </div>
 </body>
+
 </html>
