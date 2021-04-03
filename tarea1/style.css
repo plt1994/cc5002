@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(179, 197, 179);
+}
+
+button {
+    font-family: inherit;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.header {
+    padding: 20px;
+    font-size: xx-large;
+    text-align: -webkit-center;
+    background-color: inherit;
+    margin-inline: 10%;
+}
+
+.menu {
+    padding-inline: 5%;
+    font-family: monospace;
+    text-align: -webkit-center;
+    width: auto;
+}
+
+.menu-option {
+    border: thin;
+    background-color: darkseagreen;
+}
+
+.fila-insecto {
+    display: table-row;
+    background: yellowgreen;
+    width: auto;
+    clear: both;
+}
+
+.celda {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border-style: solid;
+    border-color: #2f502f;
+}
+
+.celda-1 {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border-style: solid;
+    border-color: #2f502f;
+    width: 240px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.portada {
+    display: table;
+    padding: 5%;
+    width: auto;
+}
+
+.columna {
+    /* float: left; fix for  buggy browsers */
+    /* display: table-column;          */
+    /* width: 200px;          */
+    /* background-color: #ccc;   */
+  }
