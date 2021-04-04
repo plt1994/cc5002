@@ -1,48 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estadísticas</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <title>Catálogo de insectos</title>
 </head>
+
 <body>
     <div class="header">Catálogo de avistamiento de insectos</div>
     <div class="menu">
-        <button class="menu-option" onclick="window.location.href='./index.html'"> Main </button>
-        <button class="menu-option" onclick="window.location.href='./report.html'"> Informar avistamiento </button>
-        <button class="menu-option" onclick="window.location.href='./list.html'"> Ver listado de avistamientos </button>
-        <button class="menu-option" onclick="window.location.href='./statistics.html'"> Estadísticas </button>
+        <button class="menu-option" onclick="moveTo('index')"> Main </button>
+        <button class="menu-option" onclick="moveTo('report')"> Informar avistamiento </button>
+        <button class="menu-option" onclick="moveTo('list')"> Ver listado de avistamientos </button>
+        <button class="menu-option" onclick="moveTo('statistics')"> Estadísticas </button>
     </div>
 
-    <body>
-        <form id="form1">
-            <div class="div-table">
-                   <div class="div-table-row">
-                      <div class="div-table-col" align="center">Customer ID</div>
-                      <div  class="div-table-col">Customer Name</div>
-                      <div  class="div-table-col">Customer Address</div>
-                   </div>
-                  <div class="div-table-row">
-                        <div class="div-table-col">001</div>
-                      <div class="div-table-col">002</div>
-                      <div class="div-table-col">003</div>
-                  </div>
-                  <div class="div-table-row">
-                      <div class="div-table-col">xxx</div>
-                      <div class="div-table-col">yyy</div>
-                      <div class="div-table-col">www</div>
-                 </div>
-                  <div class="div-table-row">
-                      <div class="div-table-col">ttt</div>
-                      <div class="div-table-col">uuu</div>
-                      <div class="div-table-col">Mkkk</div>
-                 </div>
-      
-            </div>
-        </form>
-      </body>
-    
+    <div class="portada">
+        <img src="./img/lineas.png" alt="grafico de lineas">
+        <img src="./img/torta.jpg" alt="grafico de torta">
+        <img src="./img/barras.jpg" alt="grafico de barras">
+    </div>
 </body>
+
 </html>
