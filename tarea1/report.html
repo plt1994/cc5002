@@ -49,7 +49,7 @@
                 <div class="leyenda"> Nombre: </div>
                 <input type="text" id="nombre" name="nombre" size=100 placeholder="Escriba su nombre aqui"
                     maxlength="200">
-                </div>
+            </div>
             <div class="entrada">
                 <div class="leyenda"> Email: </div>
                 <input type="email" id="email" name="email" size=100 placeholder="Escriba su email aqui">
@@ -81,9 +81,12 @@
                     <option value="3">Muerto</option>
                 </select>
             </div>
-            <div class="entrada">
+            <div class="entrada" name="add-pic">
                 <div class="leyenda"> Foto: </div>
-                <input type="file" name="foto-avistamiento" id="foto-avistamiento" accept="application/jpg">
+                <div id="fotos">
+                    <input type="file" name="foto-avistamiento" id="foto-avistamiento-1" accept="application/jpg">
+                </div>
+                <button type="button" onclick="addPhotoInput()">Agregar otra foto</button>
             </div>
 
             <div class="boton">
