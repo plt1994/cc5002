@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="header">Catálogo de avistamiento de insectos</div>
     <div class="menu">
@@ -15,6 +17,83 @@
         <button class="menu-option" onclick="window.location.href='./list.html'"> Ver listado de avistamientos </button>
         <button class="menu-option" onclick="window.location.href='./statistics.html'"> Estadísticas </button>
     </div>
-    
+
+    <div class="welcome">Formulario para informar sobre el avistamiento de una especie</div>
+
+    <div id="main" class="formulario">
+        <form action="./report.html" method="post">
+            <div class="leyenda-1"> Lugar de avistamiento: </div>
+            <div class="entrada">
+                <div class="leyenda"> Region: </div>
+                <select name="region" id="region">
+                    <option value="1">Arica y Parinacota</option>
+                    <option value="13">RM</option>
+                </select>
+            </div>
+            <div class="entrada">
+                <div class="leyenda"> Comuna: </div>
+                <select name="comuna" id="comuna">
+                    <option value="1">Puente alto</option>
+                    <option value="13">Santiago</option>
+                </select>
+            </div>
+            <div class="entrada">
+                <div class="leyenda"> Sector: </div>
+                <select name="sector" id="sector">
+                    <option value="1">Las viscachas</option>
+                    <option value="13">Chuchunco</option>
+                </select>
+            </div>
+            <div class="leyenda-1"> Datos de contacto: </div>
+            <div class="entrada">
+                <div class="leyenda"> Nombre: </div>
+                <input type="text" id="nombre" name="nombre" size=100 placeholder="Escriba su nombre aqui"
+                    maxlength="200">
+                </div>
+            <div class="entrada">
+                <div class="leyenda"> Email: </div>
+                <input type="email" id="email" name="email" size=100 placeholder="Escriba su email aqui">
+            </div>
+            <div class="entrada">
+                <div class="leyenda"> Número de celular: </div>
+                <input type="text" id="celular" name="celular" size=15 placeholder="Ej: +56987654321" maxlength="15">
+            </div>
+            <div class="leyenda-1"> Información de avistamiento: </div>
+            <div class="entrada">
+                <div class="leyenda"> Día y hora: </div>
+                <input type="text" id="dia-hora-avistamiento" name="dia-hora-avistamiento" size=20
+                    placeholder="año-mes-dia hora:minuto">
+            </div>
+            <div class="entrada">
+                <div class="leyenda"> Tipo: </div>
+                <select name="tipo-avistamiento" id="tipo-avistamiento">
+                    <option value="1">No sé</option>
+                    <option value="2">Insecto</option>
+                    <option value="3">Arácnido</option>
+                    <option value="4">Miriápodo</option>
+                </select>
+            </div>
+            <div class="entrada">
+                <div class="leyenda"> Estado: </div>
+                <select name="estado-avistamiento" id="estado-avistamiento">
+                    <option value="1">No sé</option>
+                    <option value="2">Vivo</option>
+                    <option value="3">Muerto</option>
+                </select>
+            </div>
+            <div class="entrada">
+                <div class="leyenda"> Foto: </div>
+                <input type="file" name="foto-avistamiento" id="foto-avistamiento" accept="application/jpg">
+            </div>
+
+            <div class="boton">
+                <button type="submit">Upload</button>
+            </div>
+
+
+        </form>
+    </div>
+
 </body>
+
 </html>

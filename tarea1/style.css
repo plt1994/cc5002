@@ -8,6 +8,7 @@ button {
     font-family: inherit;
     border-radius: 5px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .header {
@@ -62,9 +63,45 @@ button {
     width: auto;
 }
 
-.columna {
-    /* float: left; fix for  buggy browsers */
-    /* display: table-column;          */
-    /* width: 200px;          */
-    /* background-color: #ccc;   */
-  }
+.welcome {
+    padding: 20px;
+    font-size: x-large;
+    text-align: -webkit-center;
+    background-color: inherit;
+    margin-inline: 10%;
+}
+
+.leyenda {
+    display: inline-grid;
+    font-weight: 600;
+}
+
+.leyenda-1 {
+    display: inline-grid;
+    font-weight: 650;
+    font-size: x-large;
+}
+
+.entrada {
+    padding: 3px;
+}
+
+#main {
+    width: 90%;
+    padding: 15px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    border-radius: 10px;
+    box-shadow: inset #465551a8 -1px -1px 20px 5px;
+    color: white;
+    text-align: left;
+}
+
+.formulario {
+    background-color:  darkseagreen;
+}
+
+.boton {
+    border-radius: 10px;
+}
