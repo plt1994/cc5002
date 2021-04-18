@@ -22,11 +22,13 @@ button {
     font-size: xx-large;
     text-align: -webkit-center;
     background-color: inherit;
-    margin-inline: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .menu {
-    padding-inline: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
     font-family: monospace;
     text-align: -webkit-center;
     width: auto;
@@ -80,17 +82,18 @@ button {
     font-size: x-large;
     text-align: -webkit-center;
     background-color: inherit;
-    margin-inline: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .leyenda {
     display: inline-grid;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .leyenda-1 {
     display: inline-grid;
-    font-weight: 650;
+    font-weight: bolder;
     font-size: x-large;
 }
 
