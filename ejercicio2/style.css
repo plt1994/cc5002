@@ -75,3 +75,32 @@ ul.topnav li.right {float: right;}
   ul.topnav li.right, 
   ul.topnav li {float: none;}
 }
+
+.leyenda {
+  display: inline-grid;
+  font-weight: bolder;
+}
+
+.value {
+  display: inline-grid;
+  font-weight: normal;
+}
+
+.content {
+  display: inline-grid;
+  color: black;
+  background: #4CAF50;
+  border-radius: 10px;
+}
+
+#main {
+  width: 88%;
+  padding: 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+}
