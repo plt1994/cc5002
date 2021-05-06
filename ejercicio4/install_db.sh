@@ -1,0 +1,1 @@
+python cgi-bin/create_table.py 

@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+import cgi
+import cgitb
+import os
+
+cgitb.enable()
+from db import doctor
+
+print("Content-type:text/html\r\n\r\n")
+
+utf8stdout = open(1, 'w', encoding='utf-8', closefd=False)
+number = 3
+form = cgi.FieldStorage()
+
+data = [
+    form['nombre-medico'].value,
+    form['experiencia-medico'].value,
+    form['especialidad-medico'].value,
+    form['foto-medico'],
+    form['email-medico'].value,
+    form['celular-medico'].value
+]
+
+doctor.save_doctor(data)
+
+head = f"""
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" /> <!-- Declaring enconding as UTF 8-->
+    <title> Ejercicio {number}</title> <!-- Title in pestaña -->
+    <link rel="stylesheet" type="text/css" media="screen"  href="../style.css" />    <!-- CSS: -->
+</head>
+"""
+body = f"""
+<body>
+<ul class="topnav">
+  <li><a class="active" href="../index.html">Inicio</a></li>
+  <li><a href="../add_doctor.html">Agregar Datos de Médico</a></li>
+  <li><a href="list.py">Ver Médicos</a></li>
+</ul>
+
+<div id="main">
+
+    <h2>Los datos fueron enviados con éxito!</h2>
+
+</div>
+
+
+</body>
+"""
+
+document = f"""
+<!-- HTML5 -->
+<!DOCTYPE html>
+<html lang="es">
+{head}
+{body}
+</html>
+"""
+print(document, file=utf8stdout)
