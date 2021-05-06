@@ -8,7 +8,7 @@ db = mysql.connector.connect(
     password="ntesquesus",
 )
 
-with open("ejercicio4.sql") as sql_file:
+with open("anakena.sql") as sql_file:
   sql = sql_file.read()
   cursor = db.cursor(dictionary=True)
   result_iterator = cursor.execute(sql, multi=True)
