@@ -3,9 +3,9 @@
 import mysql.connector
 
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="password",
+    host="anakena",
+    user="cc500263_u",
+    password="ntesquesus",
 )
 
 with open("ejercicio4.sql") as sql_file:
