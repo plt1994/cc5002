@@ -39,7 +39,7 @@ class Doctor:
         hash_archivo = str(total) + hashlib.sha256(filename.encode()).hexdigest()[0:30]
 
         # guardar el archivo
-        file_path = f'media/{hash_archivo}.png'
+        file_path = f'../media/{hash_archivo}.png'
         open(file_path, 'wb').write(fileobj.file.read())
 
         # verificamos el tipo, si no es valido lo borramos de la db
