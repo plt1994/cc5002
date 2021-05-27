@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informar avistamiento</title>
+    <script src="script.js"></script>
+    {data['comunas']}
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">Catálogo de avistamiento de insectos, arácnidos y miriápodos</div>
+    <div class="menu">
+        <button class="menu-option" onclick="moveTo('index')"> Main </button>
+        <button class="menu-option" onclick="moveTo('report')"> Informar avistamiento </button>
+        <button class="menu-option" onclick="moveTo('list')"> Ver listado de avistamientos </button>
+        <button class="menu-option" onclick="moveTo('statistics')"> Estadísticas </button>
+    </div>
+
+    <div class="welcome">Formulario para informar sobre el avistamiento de una especie</div>
+
+    <div id="main" class="formulario">
+        <form method="post" id="report-form" action="save_avistamiento.py" enctype="multipart/form-data">
+            <div class="leyenda-1"> Lugar de avistamiento: </div>
+            <div class="entrada">
+                <div class="leyenda"> Region:</div>
+                <select onchange="loadComunas()" name="region" id="region">
+                    {data['regiones']}
+                </select>
+                <div class="error" id="error-region">Debe seleccionar una región</div>
+            </div>
+            <div class="entrada">
+                <div class="leyenda"> Comuna: </div>
+                <select name="comuna" id="comuna">
+                    <option value="0">Seleccione Comuna</option>
+                </select>
+                <div class="error" id="error-comuna">Debe seleccionar una comuna</div>
+            </div>
+            <div class="entrada">
+                <div class="leyenda"> Sector: </div>
+                <input type="text" id="sector" name="sector" size=200 maxlength="100">
+                <div class="error" id="error-sector">El largo máximo debe ser de 100 caracteres</div>
+            </div>
+            <div class="leyenda-1"> Datos de contacto: </div>
+            <div class="entrada">
+                <div class="leyenda"> Nombre: </div>
+                <input type="text" id="nombre" name="nombre" size=100 placeholder="Escriba su nombre aqui"
+                    maxlength="200">
+                    <div class="error" id="error-nombre">El largo máximo debe ser de 200 caracteres</div>
+            </div>
+            <div class="entrada">
+                <div class="leyenda"> Email: </div>
+                <input type="email" id="email" name="email" size=100 placeholder="Escriba su email aqui">
+                <div class="error" id="error-email">Porfavor ingrese un email válido</div>
+            </div>
+            <div class="entrada">
+                <div class="leyenda"> Número de celular: </div>
+                <input type="text" id="celular" name="celular" size=15 placeholder="Ej: +56987654321" maxlength="15">
+                <div class="error" id="error-celular">Porfavor ingrese número segun el formato +56978654321</div>
+            </div>
+            <div id="avistamientos">
+                <div class="leyenda-1"> Información de avistamiento: </div>
+                <div class="avistamiento hidden-div" id="avistamiento-0">
+                    <div class="boton">
+                        <button type="button" onclick="removerAvistamiento(this)">Eliminar</button>
+                    </div>
+                    <div class="entrada">
+                        <div class="leyenda"> Día y hora: </div>
+                        <input type="text" id="dia-hora-avistamiento-0" name="dia-hora-avistamiento" size=20
+                            placeholder="año-mes-dia hora:minuto">
+                            <div class="error" id="error-fecha-0">Formato de fecha invalido</div>
+                        </div>
+                    <div class="entrada">
+                        <div class="leyenda"> Tipo: </div>
+                        <select name="tipo-avistamiento" id="tipo-avistamiento-0">
+                            <option value="0">Seleccione un tipo</option>
+                            <option value="1">No sé</option>
+                            <option value="2">Insecto</option>
+                            <option value="3">Arácnido</option>
+                            <option value="4">Miriápodo</option>
+                        </select>
+                        <div class="error" id="error-tipo-0">Debe seleccionar un tipo</div>
+                    </div>
+                    <div class="entrada">
+                        <div class="leyenda"> Estado: </div>
+                        <select name="estado-avistamiento" id="estado-avistamiento-0">
+                            <option value="0">Seleccione un estado</option>
+                            <option value="1">No sé</option>
+                            <option value="2">Vivo</option>
+                            <option value="3">Muerto</option>
+                        </select>
+                        <div class="error" id="error-estado-0">Debe seleccionar un estado</div>
+                    </div>
+                    <div class="entrada">
+                        <div class="leyenda"> Foto: </div>
+                        <div id="fotos-0">
+                            <input type="file" name="foto-avistamiento" id="foto-avistamiento-0-1"
+                                accept="application/jpg">
+                        </div>
+                        <div class="error" id="error-foto-0">Debe subir almenos una foto</div>
+                        <button type="button" id="add-pic-button-0" onclick="addPhotoInput(this)">Agregar otra foto</button>
+                    </div>
+                </div>
+                <div class="avistamiento" id="avistamiento-1">
+                    <div class="entrada">
+                        <div class="leyenda"> Día y hora: </div>
+                        <input type="text" id="dia-hora-avistamiento-1" name="dia-hora-avistamiento" size=20
+                            placeholder="año-mes-dia hora:minuto">
+                            <div class="error" id="error-fecha-1">Formato de fecha invalido</div>
+                        </div>
+                    <div class="entrada">
+                        <div class="leyenda"> Tipo: </div>
+                        <select name="tipo-avistamiento" id="tipo-avistamiento-1">
+                            <option value="0">Seleccione un tipo</option>
+                            <option value="1">No sé</option>
+                            <option value="2">Insecto</option>
+                            <option value="3">Arácnido</option>
+                            <option value="4">Miriápodo</option>
+                        </select>
+                        <div class="error" id="error-tipo-1">Debe seleccionar un tipo</div>
+                    </div>
+                    <div class="entrada">
+                        <div class="leyenda"> Estado: </div>
+                        <select name="estado-avistamiento" id="estado-avistamiento-1">
+                            <option value="0">Seleccione un estado</option>
+                            <option value="1">No sé</option>
+                            <option value="2">Vivo</option>
+                            <option value="3">Muerto</option>
+                        </select>
+                        <div class="error" id="error-estado-1">Debe seleccionar un estado</div>
+                    </div>
+                    <div class="entrada">
+                        <div class="leyenda"> Foto: </div>
+                        <div id="fotos-1">
+                            <input type="file" name="foto-avistamiento" id="foto-avistamiento-1-1"
+                                accept="application/jpg">
+                        </div>
+                        <div class="error" id="error-foto-1">Debe subir almenos una foto</div>
+                        <button type="button" id="add-pic-button-1" onclick="addPhotoInput(this)">Agregar otra foto</button>
+                    </div>
+                </div>
+            </div>
+            <div class="boton">
+                <button type="button" onclick="nuevoAvistamiento()">Informar otro avistamiento en este sector</button>
+            </div>
+
+            <div class="boton">
+                <button type="button" onclick="validateForm()">Enviar información de avistamiento</button>
+            </div>
+            <!-- The Modal -->
+            <div id="confirm-send-modal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <p>¿Está seguro que desea enviar
+                        esta información?</p>
+                    <button type="submit">Sí, estoy total y absolutamente seguro</button>
+                    <button type="button" onclick="closeConfirmModal()">No estoy seguro, quiero volver al
+                        formulario</button>
+                </div>
+            </div>
+
+            <div id="finish-report-modal" class="modal" {data['display']}>
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <p>{data['confirm_message']}</p>
+                    {data['errors']}
+                    {data['modal_button']}
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>
