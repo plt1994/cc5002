@@ -6,14 +6,14 @@ from utils import imprimeerror
 import os
 import filetype
 
-ENV = "dev"
+ENV = "prod"
 
 MAX_FILE_SIZE = 10000 * 1000  # 10 MB
 sql_connection_data = {
     "host": "localhost",
     "user": "cc500263_u",
     "password": "ntesquesus",
-    "database": "tarea2"
+    "database": "cc500263_db"
 }
 
 sql_connection_data_dev = {
@@ -29,11 +29,8 @@ else:
     db_connection_data = sql_connection_data
 
 class Model:
-    save_query = '''
-            INSERT INTO medico (nombre, experiencia, especialidad, foto, email, celular)
-            VALUES (%s, %s, %s, %s, %s, %s)
-        '''
-    table = 'medico'
+    save_query = ""
+    table = ''
     id_for_query = "id"
 
     def __init__(self, host, user, password, database):
@@ -83,11 +80,6 @@ class Foto(Model):
 
         if not filename:
             imprimeerror(10, 'Archivo no subido')
-
-        # verificamos el tipo
-        # size = os.fstat(fileobj.file.fileno()).st_size
-        # if size > MAX_FILE_SIZE:
-        #     imprimeerror(1000, 'Tamaño excede 10mb')
 
         # calculamos cuantos elementos existen y actualizamos el hash
         sql = "SELECT COUNT(id) FROM foto"
@@ -153,7 +145,6 @@ class Avistamiento(Model):
         self.cursor.execute(sql)
         return self.cursor.fetchall()
 
-#Genérico, hacer esto para todos
 region = Region(**db_connection_data)
 comuna = Comuna(**db_connection_data)
 avistamiento = Avistamiento(**db_connection_data)
