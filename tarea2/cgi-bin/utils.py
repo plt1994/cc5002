@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import re
 
 STATIC_DIR = "../static/"
