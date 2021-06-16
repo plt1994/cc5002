@@ -3,6 +3,7 @@
 import cgi
 import cgitb
 cgitb.enable()
+print("Content-type:text/html\r\n\r\n")
 from models import avistamiento, foto, comuna, detalle_avist
 from utils import render, MEDIA_DIR
 

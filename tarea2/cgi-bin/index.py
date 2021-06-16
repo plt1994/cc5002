@@ -3,7 +3,7 @@
 import cgi
 import cgitb
 cgitb.enable()
-
+print("Content-type:text/html\r\n\r\n")
 from models import avistamiento
 from utils import STATIC_DIR, MEDIA_DIR, render
 
@@ -36,7 +36,5 @@ for avist in last_avistamientos:
 data = {
     "insectos_table": insectos_table
 }
-
-print(last_avistamientos)
 
 render("index", data)

@@ -3,6 +3,7 @@
 import cgi
 import cgitb
 cgitb.enable()
+print("Content-type:text/html\r\n\r\n")
 from models import avistamiento, detalle_avist, foto
 from utils import render, validate_form
 from report import get_data_to_render
