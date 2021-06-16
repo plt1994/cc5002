@@ -7,9 +7,13 @@
     - [ ] necesito un json con N entradas, cada una con día y cantidad de avistamientos
   - [x] gráfico 2: gráfico de torta para total de avistamientos por tipo
   - [ ] gráfico 3: gráfico de barras
-    - [ ] eje x: meses 
-    - [ ] eje y: cantidad de avistamientos
-    - [ ] 3 barras por cada punto en eje x: vivos | muertos | no sé 
+    - [x] eje x: meses 
+    - [x] eje y: cantidad de avistamientos
+    - [x] 3 barras por cada punto en eje x: vivos | muertos | no sé 
+    - [x] obtener datos de todos los detalle_avistamiento
+      - [x] ordenarlos por tipo
+      - [x] ordenarlos por mes
+      - [x] parsearlos
 - [ ] Implementación de visualización de un mapa en la portada con las comunas que tienen fotos
   - [ ] Usar la API de leaflet
   - [ ] Incluir marcador por cada comuna con fotos
