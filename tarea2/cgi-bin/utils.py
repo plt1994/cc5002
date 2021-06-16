@@ -96,7 +96,7 @@ def validate_form(form):
                 else:
                     avistamiento[val.name] = val.value
         lista_avistamientos.append(avistamiento)
-        errores += validate_lista_avistamientos(lista_avistamientos)
+        #errores += validate_lista_avistamientos(lista_avistamientos)
         return True, {"lugar": lugar, "contacto": contacto, "lista_avistamientos": lista_avistamientos}
     except Exception as e:
         return False, errores
