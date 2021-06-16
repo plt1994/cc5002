@@ -2,9 +2,12 @@
 import re
 from environment import ENV
 STATIC_DIR = "../static/"
+STATIC_DIR_2 = STATIC_DIR
 MEDIA_DIR = "../../tarea2/media/"
 if ENV == "dev":
     MEDIA_DIR = "../media/"
+    STATIC_DIR = "static"
+    STATIC_DIR_2 = "../static"
 
 def imprimeerror(code, error):
     print(code, error)
@@ -105,10 +108,10 @@ def validate_form(form):
         return False, errores
 
 def render(file, data):
-    with open(f'static/{file}.html', 'r') as file:
+    with open(f'{STATIC_DIR}/{file}.html', 'r') as file:
         s = file.read()
-        s = s.replace('script.js',f'{STATIC_DIR}script.js')
-        s = s.replace('style.css',f'{STATIC_DIR}style.css')
+        s = s.replace('script.js',f'{STATIC_DIR_2}/script.js')
+        s = s.replace('style.css',f'{STATIC_DIR_2}/style.css')
         s = s.replace('./img/',f'{MEDIA_DIR}')
         # esto parece ser una mala idea por temas de seguridad
         # pero sirve para esta tarea

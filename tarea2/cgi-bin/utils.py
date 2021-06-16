@@ -102,7 +102,7 @@ def validate_form(form):
         return False, errores
 
 def render(file, data):
-    with open(f'static/{file}.html', 'r') as file:
+    with open(f'{STATIC_DIR}/{file}.html', 'r') as file:
         s = file.read()
         s = s.replace('script.js',f'{STATIC_DIR}script.js')
         s = s.replace('style.css',f'{STATIC_DIR}style.css')
