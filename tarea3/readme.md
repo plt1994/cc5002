@@ -5,7 +5,7 @@
     - [ ] eje x: días
     - [ ] eje y: cantidad avistamientos por día
     - [ ] necesito un json con N entradas, cada una con día y cantidad de avistamientos
-  - [ ] gráfico 2: gráfico de torta para total de avistamientos por tipo
+  - [x] gráfico 2: gráfico de torta para total de avistamientos por tipo
   - [ ] gráfico 3: gráfico de barras
     - [ ] eje x: meses 
     - [ ] eje y: cantidad de avistamientos
@@ -21,3 +21,10 @@ fotografías de los avistamientos de la comuna correspondiente.
     - [ ]  El listado debe mostrar el día y hora, el tipo de avistamiento y el estado.
     - [ ]  Debe incluir un enlace para “ver avistamiento”, al hacer click sobre el enlace, este se debe abrir una nueva pestaña o ventana
 del navegador mostrando la información del avistamiento correspondiente.
+
+
+# Comandos permisos
+
+- chmod o+rwx media
+- chmod o+rx -R static
+- chmod 755 -R public_anakena

@@ -38,6 +38,4 @@ data = {
     "insectos_table": insectos_table
 }
 
-print(ENV)
-
 render("index", data)

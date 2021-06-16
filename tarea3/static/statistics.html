@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../static/flotstyles.css">
     <title>Catálogo de insectos</title>
+    <script language="javascript" type="text/javascript" src="../static/flot/jquery.js"></script>
+	<script language="javascript" type="text/javascript" src="../static/flot/jquery.canvaswrapper.js"></script>
+	<script language="javascript" type="text/javascript" src="../static/flot/jquery.colorhelpers.js"></script>
+	<script language="javascript" type="text/javascript" src="../static/flot/jquery.flot.js"></script>
+	<script language="javascript" type="text/javascript" src="../static/flot/jquery.flot.saturated.js"></script>
+	<script language="javascript" type="text/javascript" src="../static/flot/jquery.flot.browser.js"></script>
+	<script language="javascript" type="text/javascript" src="../static/flot/jquery.flot.drawSeries.js"></script>
+	<script language="javascript" type="text/javascript" src="../static/flot/jquery.flot.uiConstants.js"></script>
+	<script language="javascript" type="text/javascript" src="../static/flot/jquery.flot.legend.js"></script>
+	<script language="javascript" type="text/javascript" src="../static/flot/jquery.flot.pie.js"></script>
+	<script>
+    {data['graphjs']}
+    </script>
 </head>
 
 <body>
@@ -17,12 +31,19 @@
         <button class="menu-option" onclick="moveTo('list')"> Ver listado de avistamientos </button>
         <button class="menu-option" onclick="moveTo('statistics')"> Estadísticas </button>
     </div>
-
+    
     <div class="portada">
         <img src="./img/graph1.png" alt="grafico de lineas">
+        <div class="demo-container">
+            <h3 id="title"></h3>
+            <div id="placeholder-graph2" class="demo-placeholder"></div>
+            <p id="description"></p>	
+        </div>
         <img src="./img/graph2.png" alt="grafico de torta">
+        
         <img src="./img/graph3.png" alt="grafico de barras">
     </div>
+    
 </body>
 
 </html>
