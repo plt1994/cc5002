@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de avistamientos</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">Catálogo de avistamiento de insectos, arácnidos y miriápodos</div>
+    <div class="menu">
+        <button class="menu-option" onclick="moveTo('index')"> Main </button>
+        <button class="menu-option" onclick="moveTo('report')"> Informar avistamiento </button>
+        <button class="menu-option" onclick="moveTo('list')"> Ver listado de avistamientos </button>
+        <button class="menu-option" onclick="moveTo('statistics')"> Estadísticas </button>
+    </div>
+    
+    <div class="div-tabla">
+        <div class="fila-insecto">
+            <div class="celda-1">Fecha - hora</div>
+            <div class="celda-1">Comuna</div>
+            <div class="celda-1">Sector</div>
+            <div class="celda-1">Nombre contacto</div>
+            <div class="celda-1">Total avistamientos</div>
+            <div class="celda-1">Total Fotos</div>
+        </div>
+        {data['lista_avistamientos']}
+       
+    </div>
+    <div class="center-pagination">{data['pagination']}</div>
+    
+    
+</body>
+</html>

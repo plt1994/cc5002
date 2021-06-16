@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de avistamientos</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">Detalle avistamiento</div>
+    <div class="menu">
+        <button class="menu-option" onclick="moveTo('index')"> Main </button>
+        <button class="menu-option" onclick="moveTo('report')"> Informar avistamiento </button>
+        <button class="menu-option" onclick="moveTo('list')"> Ver listado de avistamientos </button>
+        <button class="menu-option" onclick="moveTo('statistics')"> Estadísticas </button>
+    </div>
+    {data['detalles']}
+<!-- The Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="hideModal()">&times;</span>
+    <div id="modal-img"><img src="./img/araña-pollito-800x600.jpg" alt="imagen de araña"></div>
+  </div>
+</div>
+</body>
+
+</html>

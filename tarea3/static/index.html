@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Catálogo de insectos</title>
+</head>
+
+<body>
+    <div class="header">Catálogo de avistamiento de insectos, arácnidos y miriápodos</div>
+    <div class="menu">
+        <button class="menu-option" onclick="moveTo('index')"> Main </button>
+        <button class="menu-option" onclick="moveTo('report')"> Informar avistamiento </button>
+        <button class="menu-option" onclick="moveTo('list')"> Ver listado de avistamientos </button>
+        <button class="menu-option" onclick="moveTo('statistics')"> Estadísticas </button>
+    </div>
+
+    <div class="welcome"> Bienvenido al catálogo de especies en peligro! En esta página podrá
+        ver una lista de avistamientos de distintos insectos, aracnidos y otros, con propósito de
+        informar la ubicación y poder actuar con respecto a estos informes. ¡Tu colaboración es
+        muy apreciada!
+    </div>
+
+    <div class="portada">
+        <div class="fila-insecto">
+            <div class="celda-1">Fecha - hora</div>
+            <div class="celda-1">Comuna</div>
+            <div class="celda-1">Sector</div>
+            <div class="celda-1">Tipo</div>
+            <div class="celda-1">Foto</div>
+        </div>
+        {data['insectos_table']}
+        
+    </div>
+
+
+    <p>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fanakena.dcc.uchile.cl%2F~plopez%2Fcc5002%2Ftarea1%2Findex.html&profile=css3&usermedium=all&warning=2&vextwarning=">
+            <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                alt="¡CSS Válido!" />
+        </a>
+    </p>
+</body>
+
+</html>
