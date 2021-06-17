@@ -1,12 +1,12 @@
 # Requisitos de la tarea 3
 
-- [ ] Implementación de gráficos dinámicos para la vista de estadísticas
-  - [ ] gráfico 1: gráfico de lineas para la cantidad de avistamientos por día
-    - [ ] eje x: días
-    - [ ] eje y: cantidad avistamientos por día
-    - [ ] necesito un json con N entradas, cada una con día y cantidad de avistamientos
+- [x] Implementación de gráficos dinámicos para la vista de estadísticas
+  - [x] gráfico 1: gráfico de lineas para la cantidad de avistamientos por día
+    - [x] eje x: días
+    - [x] eje y: cantidad avistamientos por día
+    - [x] necesito un json con N entradas, cada una con día y cantidad de avistamientos
   - [x] gráfico 2: gráfico de torta para total de avistamientos por tipo
-  - [ ] gráfico 3: gráfico de barras
+  - [x] gráfico 3: gráfico de barras
     - [x] eje x: meses 
     - [x] eje y: cantidad de avistamientos
     - [x] 3 barras por cada punto en eje x: vivos | muertos | no sé 

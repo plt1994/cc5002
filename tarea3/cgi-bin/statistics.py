@@ -59,7 +59,6 @@ for avist in detalle_avist_data:
     estado_avist[avist[3]][meses[avist[1].month]]+=1
 
 graph_1_data = json.dumps(list(avistamientos_por_dia.items()))
-print(graph_1_data)
 graph_2_data = json.dumps(
     [
         { 'label': "No sé",  'data': detalle_avist.count(where="tipo = 'no sé'")},
