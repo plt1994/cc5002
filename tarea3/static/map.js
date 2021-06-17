@@ -1,7 +1,7 @@
 function getPopUpHtml(data) {
-    console.log(data)
+    console.log(data.avistamientos[0].det_avistamiento.idAvistamiento)
     return "<p>"+JSON.stringify(data.avistamientos)+"</p>"+
-            "<a target='_blank' href='detail.py?id='"+data.avistamientos[0].det_avistamiento.idAvistamiento.toString()+">Ver avistamiento</a>"   
+            "<a target='_blank' href='detail.py?id="+data.avistamientos[0].det_avistamiento.idAvistamiento.toString()+"'>Ver avistamiento</a>"   
 }
 
 async function putMarks(mapObject){
