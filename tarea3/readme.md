@@ -15,11 +15,11 @@
       - [x] ordenarlos por mes
       - [x] parsearlos
 - [ ] Implementación de visualización de un mapa en la portada con las comunas que tienen fotos
-  - [ ] Usar la API de leaflet
-  - [ ] Incluir marcador por cada comuna con fotos
-    - [ ] obtener el listado de comunas de los avistamientos con fotos en la base de datos
-    - [ ] Al pasar el puntero del mouse sobre el marcador, debe aparecer la cantidad de fotos de avistamientos que dicha comuna posee.
-      - [ ] Esto lo debe hacer usando el atributo “title” del marcador
+  - [x] Usar la API de leaflet
+  - [x] Incluir marcador por cada comuna con fotos
+    - [x] obtener el listado de comunas de los avistamientos con fotos en la base de datos
+    - [x] Al pasar el puntero del mouse sobre el marcador, debe aparecer la cantidad de fotos de avistamientos que dicha comuna posee.
+      - [x] Esto lo debe hacer usando el atributo “title” del marcador
     - [ ] Al hacer click sobre el marcador que está en el mapa, deberá usar un elemento “popup” de Leaflet para mostrar un listado con las
 fotografías de los avistamientos de la comuna correspondiente.
     - [ ]  El listado debe mostrar el día y hora, el tipo de avistamiento y el estado.

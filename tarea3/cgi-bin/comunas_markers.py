@@ -54,9 +54,11 @@ for av in avistamientos:
             detalles_avistamientos.append(aux)
     for detalle_avistamiento_i in detalles_avistamientos:
         if lista_avistamientos["data"].get(comuna_nombre):
-            lista_avistamientos["data"][comuna_nombre].append(detalle_avistamiento_i)
+            lista_avistamientos["data"][comuna_nombre]["avistamientos"].append(detalle_avistamiento_i)
         else:
-            lista_avistamientos["data"][comuna_nombre] = [detalle_avistamiento_i]
+            lista_avistamientos["data"][comuna_nombre] = {"nfotos": 0}
+            lista_avistamientos["data"][comuna_nombre]["avistamientos"] = [detalle_avistamiento_i]
+        lista_avistamientos["data"][comuna_nombre]["nfotos"] += cant_fotos
     
     lista_avistamientos["comunas"] = list(set(lista_avistamientos["comunas"]))
 

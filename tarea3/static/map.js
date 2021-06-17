@@ -12,10 +12,13 @@ async function putMarks(mapObject){
             // no coinciden con las de la base de datos
             for (let i = 0; i < data.length; i++) {
                 if (comunas.includes(data[i].name)){
-                    console.log([data[i].lng, data[i].lat]);
-                    var marker = L.marker([data[i].lat, data[i].lng]).addTo(mymap);
+                    var dataComuna = avistamientos.data[data[i].name]
+                    var marker = L.marker(
+                        [data[i].lat, data[i].lng],
+                        {
+                            title: "fotos: "+dataComuna.nfotos}).addTo(mymap);
                     marker.bindPopup("<b>Hello world!</b><br>aqui van las img.");
-                    console.log(marker.title)
+                    
                 }
                 
             }
