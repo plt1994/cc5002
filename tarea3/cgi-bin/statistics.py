@@ -48,11 +48,18 @@ estado_avist = {
             "Diciembre":0}
 }
 total_d_a = detalle_avist.count()
-detalle_avist_data = detalle_avist.get_all(limit=total_d_a)
+detalle_avist_data = detalle_avist.get_all(limit=total_d_a, order="ORDER BY dia_hora")
+avistamientos_por_dia = {}
 for avist in detalle_avist_data:
+    dia = avist[1].strftime("%m/%d/%y")
+    if avistamientos_por_dia.get(dia):
+        avistamientos_por_dia[dia] += 1
+    else:
+        avistamientos_por_dia[dia] = 1
     estado_avist[avist[3]][meses[avist[1].month]]+=1
 
-graph_1_data = "''"
+graph_1_data = json.dumps(list(avistamientos_por_dia.items()))
+print(graph_1_data)
 graph_2_data = json.dumps(
     [
         { 'label': "No sé",  'data': detalle_avist.count(where="tipo = 'no sé'")},
@@ -86,6 +93,30 @@ $(function() {
    """
     + graph_data
     + """
+
+    function graph1() {
+        var placeholderGraph1 = $("#placeholder-graph1");
+        placeholderGraph1.unbind();
+        $("#title-0").text("Cantidad de avistamientos por día");
+        $.plot(placeholderGraph1, [{
+            data : dataGraph1,
+            lines: { show: true },
+			points: { show: true }
+            }],
+            {
+                xaxis: {
+                    axisLabel: 'día',
+                    mode: "categories",
+                    showTicks: true,
+                    gridLines: true
+                    },
+                yaxis: {
+                    axisLabel: 'cantidad de avistamientos'
+                }
+            });
+
+    };
+
     function graph2() {
         var placeholderGraph2 = $("#placeholder-graph2");
         placeholderGraph2.unbind();
@@ -143,6 +174,7 @@ $(function() {
 		});
     }
 
+    graph1();
     graph2();
     graph3();
 });
