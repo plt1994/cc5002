@@ -1,3 +1,9 @@
+function getPopUpHtml(data) {
+    console.log(data)
+    return "<p>"+JSON.stringify(data.avistamientos)+"</p>"+
+            "<a target='_blank' href='detail.py?id='"+data.avistamientos[0].det_avistamiento.idAvistamiento.toString()+">Ver avistamiento</a>"   
+}
+
 async function putMarks(mapObject){
 	$.ajax({
 		url: "comunas_markers.py"
@@ -17,7 +23,7 @@ async function putMarks(mapObject){
                         [data[i].lat, data[i].lng],
                         {
                             title: "fotos: "+dataComuna.nfotos}).addTo(mymap);
-                    marker.bindPopup("<b>Hello world!</b><br>aqui van las img.");
+                    marker.bindPopup(getPopUpHtml(dataComuna));
                     
                 }
                 
